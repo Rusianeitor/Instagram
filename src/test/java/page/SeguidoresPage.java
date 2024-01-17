@@ -30,18 +30,22 @@ public class SeguidoresPage extends Base {
         click(btnIniciarLocator);
     }
 
-    public void magia(){
-        esperaExplicita(10,btnNotificacionLocator);
-        click(btnNotificacionLocator);
+    public void magia() throws InterruptedException {
+
+        Thread.sleep(3000);
+        if(isDisplayed(btnNotificacionLocator)){
+            click(btnNotificacionLocator);
+        }
+        esperaExplicita(10, tabPerfilLocator);
         click(tabPerfilLocator);
 
-        for (short i=0; i<2; i++){ //poner el i<2 a 5000
+        for (short i=0; i<1; i++){ //poner el i<2 a 5000
             esperaExplicita(10, txtSeguidoresLocator);
             click(txtSeguidoresLocator);
             esperaExplicita(10, btnEliminarLocator);
             List<WebElement> botones=new ArrayList<>();
             botones=findElements(btnEliminarLocator);
-            for(short j=0; j<2; j++){ //poner el j<2 a 5
+            for(short j=0; j<1; j++){ //poner el j<2 a 5
                 click(botones.get(j));
                 esperaExplicita(10,btnConfirmarLocator);
                 click(btnConfirmarLocator);

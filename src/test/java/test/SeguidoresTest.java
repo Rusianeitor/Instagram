@@ -21,7 +21,7 @@ public class SeguidoresTest {
     }
 
     @Test
-    public void seguidores (){
+    public void seguidores () throws InterruptedException {
         seguidores.logeo();
         seguidores.magia();
     }
