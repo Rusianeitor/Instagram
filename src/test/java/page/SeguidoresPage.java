@@ -47,7 +47,7 @@ public class SeguidoresPage extends Base {
             botones=findElements(btnEliminarLocator);
             for(short j=0; j<1; j++){ //poner el j<2 a 5
                 click(botones.get(j));
-                esperaExplicita(10,btnConfirmarLocator);
+                Thread.sleep(5000); //acá cambias el tiempo de espera en milisegundos antes de darle click
                 click(btnConfirmarLocator);
             }
             esperaExplicita(10,btnCerrarLocator);
